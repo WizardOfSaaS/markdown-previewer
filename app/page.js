@@ -7,13 +7,14 @@ import ViewBar from "./components/ViewBar"
 
 export default function Home() {
   const [input, setInput] = useState('')
+  const [layout, setLayout] = useState('both')
   const convertedHtml = marked(input)
   return (
     <main className="flex">
-      <ViewBar />
+      <ViewBar layout={layout} setLayout={setLayout} />
       <div className="editor-previewer">
-        <Editor input={input} setInput={setInput} />
-        <Previewer html={convertedHtml} />
+        {layout !== 'PREVIEW' && <Editor input={input} setInput={setInput} />}
+        {layout !== 'EDITOR' && <Previewer html={convertedHtml} />}
       </div>
     </main>
   )
