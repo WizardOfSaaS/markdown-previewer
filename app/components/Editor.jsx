@@ -1,3 +1,4 @@
+"use client";
 function Editor({ input, setInput }) {
   const handleInputChange = (e) => {
     setInput(e.target.value);

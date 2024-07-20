@@ -1,6 +1,6 @@
 "use client";
 
-function ViewBar({ layout, setLayout }) {
+function ViewBar({ setLayout }) {
   function handleViewButtonClick(e) {
     setLayout(e.target.textContent);
     document

@@ -1,3 +1,4 @@
+"use client";
 import "../github-markdown.css";
 function Previewer({ html }) {
   return (
