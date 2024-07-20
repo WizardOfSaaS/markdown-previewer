@@ -1,6 +1,10 @@
+import "../github-markdown.css";
 function Previewer({ html }) {
   return (
-    <div className="previewer" dangerouslySetInnerHTML={{ __html: html }}></div>
+    <div
+      className="previewer markdown-body"
+      dangerouslySetInnerHTML={{ __html: html }}
+    ></div>
   );
 }
 
