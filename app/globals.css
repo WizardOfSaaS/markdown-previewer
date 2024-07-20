@@ -4,9 +4,10 @@
 
 body {
   width: 100vw;
+  max-width: min(1500px, calc(100vw - 20px));
   height: 100vh;
   font-size: 25px;
-  margin: 0;
+  margin: 10px auto;
   padding: 5px;
 }
 
@@ -22,12 +23,33 @@ main {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 4px;;
 }
+
+.viewbar button {
+  font-size: 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  width: 100%;
+  background-color: #00000000;
+  border: none;
+  transition: 0.3s;
+  padding: 3px;
+  margin: 3px;
+  margin-bottom:0;
+}
+
+.viewbar button.active {
+  outline: 5px solid hsl(200, 25%, 50%);
+}
+
 
 .editor-previewer {
   display: flex;
   flex: 1;
   gap: 1rem;
+  outline: 5px solid hsl(200, 25%, 50%);
+  border-radius: 10px;
 }
 
 .editor, .previewer {
@@ -35,16 +57,10 @@ main {
   height: 100%;
   outline: 1px solid black;
   padding: 1rem;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
 }
 
 .editor {
   font-size: 16px;
-}
-
-.active {
-  border: 3px solid darkblue;
-}
-
-.no-display {
-  display: none
 }

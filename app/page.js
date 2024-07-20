@@ -7,7 +7,7 @@ import ViewBar from "./components/ViewBar"
 
 export default function Home() {
   const [input, setInput] = useState('')
-  const [layout, setLayout] = useState('both')
+  const [layout, setLayout] = useState('BOTH')
   const convertedHtml = marked(input)
   return (
     <main className="flex">
