@@ -5,10 +5,10 @@
 body {
   width: 100vw;
   max-width: min(1500px, calc(100vw - 20px));
-  height: 100vh;
+  height: calc(98vh - 3rem);
   font-size: 25px;
   margin: 10px auto;
-  padding: 5px;
+  padding: 15px;
 }
 
 main {
@@ -63,4 +63,26 @@ main {
 
 .editor {
   font-size: 16px;
+  resize: horizontal;
+}
+
+#footer {
+  text-align: center;
+  margin: 1rem;
+  max-height: 3rem;
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#footer a {
+  color: #333;
+  padding: 3px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.2s ease-in-out;
+}
+
+#footer a:hover {
+  background-color: #ddd;
+  color: #111;
 }
