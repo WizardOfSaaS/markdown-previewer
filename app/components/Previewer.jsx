@@ -1,9 +1,6 @@
-function Previewer({ input }) {
+function Previewer({ html }) {
   return (
-    <div
-      className="previewer"
-      dangerouslySetInnerHTML={{ __html: input }}
-    ></div>
+    <div className="previewer" dangerouslySetInnerHTML={{ __html: html }}></div>
   );
 }
 
